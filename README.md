@@ -32,7 +32,7 @@ Welcome to my personal portfolio! This is a simple, responsive website showcasin
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/Samkwizera/Samkwizera-portfolio.git
-   cd YourRepositoryName
+   cd smakwizera-portfolio
 
 📬 Contact
 📧 Email: s.ihimbazwe@alustudent.com
