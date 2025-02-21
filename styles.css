@@ -98,7 +98,9 @@ body {
     transform: scale(1.05);
 }
 
-.about-me, .skills, .projects, .get-in-touch {
+.about-me,
+.skills,
+.projects {
     max-width: 1000px;
     margin: 5em auto;
     padding: 3em;
@@ -109,8 +111,7 @@ body {
 
 .about-me h2,
 .skills h2,
-.projects h2,
-.get-in-touch h2 {
+.projects h2 {
     font-family: var(--font-heading);
     text-align: center;
     margin-bottom: 1.5em;
@@ -118,7 +119,8 @@ body {
     color: var(--primary-color);
 }
 
-.skill-card, .project-card {
+.skill-card,
+.project-card {
     background: #222;
     padding: 2em;
     border-radius: 10px;
@@ -141,11 +143,27 @@ body {
 }
 
 .get-in-touch {
+    max-width: 1000px;
+    margin: 5em auto;
+    padding: 3em;
+    background: var(--primary-color);
+    color: #000;
+    border-radius: 10px;
     display: block;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.get-in-touch:hover {
+    transform: translateY(-5px);
 }
 
 .get-in-touch h2 {
     margin-bottom: 2em;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2em;
+    color: #000;
 }
 
 .contact-wrapper {
@@ -163,13 +181,13 @@ body {
 }
 
 .contact-info a {
-    color: var(--text-color);
+    color: #000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .get-in-touch .logo {
@@ -179,10 +197,33 @@ body {
     margin-left: auto;
 }
 
+.about-me:hover {
+    transform: translateY(-5px);
+}
+
 footer {
     background-color: #222;
     text-align: center;
     padding: 1.5em;
     color: var(--text-color);
     font-size: 0.9em;
+}
+
+.about-me p {
+    display: inline-block;
+    white-space: normal;
+    overflow: hidden;
+    border-right: 2px solid var(--text-color);
+    width: 0;
+    max-width: 100%;
+    animation: typing 4s steps(50, end) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
 }
