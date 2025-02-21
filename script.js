@@ -1,61 +1,32 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        const navMenu = document.querySelector('.nav-menu');
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        }
     });
 });
 
-const projects = [
-    {
-        title: "Velozy (SaaS Company)",
-        description: "Website created for a SaaS company offering advanced solutions.",
-        image: "chrome-capture-2025-0-24.png",
-        category: "web"
-    },
-    {
-        title: "SafeSpaceRwanda",
-        description: "Collaborated with a co-founder to develop a mental health support page.",
-        image: "logo 3.jpg",
-        category: "web"
-    },
-    {
-        title: "Maurizia Family Business",
-        description: "Developed a page for a family business to showcase services and products.",
-        image: "mauriza.jpg",
-        category: "web"
-    }
-];
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-const projectList = document.querySelector('.project-list');
-projects.forEach(project => {
-    const projectCard = document.createElement('div');
-    projectCard.className = 'project-card';
-    projectCard.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
-    `;
-    projectList.appendChild(projectCard);
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
+            entry.target.classList.add('fade-in');
         }
     });
-}, {
-    threshold: 0.1
-});
+}, { threshold: 0.1 });
 
-document.querySelectorAll('section').forEach((section) => {
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('fade-section');
     observer.observe(section);
 });

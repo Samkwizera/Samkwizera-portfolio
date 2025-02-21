@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Samuel Kwizera - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Kwizera Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <nav class="navbar">
-        <div class="nav-brand">
-            <img src="logo.png" alt="SK Logo" class="logo" />
-        </div>
-           
-        </div>
-        
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+        <img src="logo.png" alt="Logo" class="logo">
         <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -26,26 +18,24 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="menu-toggle">☰</div>
     </nav>
 
-   
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <h1>Samuel Kwizera</h1>
             <p class="hero-subtitle">Data Analyst | AI Enthusiast | Graphic Designer</p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Get in Touch</a>
-                <a href="#projects" class="cta-button cta-secondary">View Projects</a>
+                <a href="#projects" class="cta-button">View Projects</a>
+                <a href="#contact" class="cta-button cta-secondary">Get in Touch</a>
             </div>
         </div>
     </section>
 
-   
-    <section id="about" class="about">
+    <section class="about-me" id="about">
         <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                Hello! I’m Samuel Kwizera, a multifaceted professional with a passion 
+        <div class="about-me-container">
+            <p> Hello! I’m Samuel Kwizera Ihimbazwe, a multifaceted professional with a passion 
                 for data analysis, AI, and creative design. I enjoy tackling complex 
                 problems, crafting intelligent solutions, and presenting my work in 
                 visually striking ways.
@@ -53,28 +43,27 @@
         </div>
     </section>
 
-    
-    <section id="skills" class="skills">
+    <section class="skills" id="skills">
         <h2>My Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Data Analysis</h3>
-                <p>Extract insights from large datasets and create valuable reports.</p>
+                <p>Ability to Extract insights from large datasets and create valuable reports.</p>
             </div>
             <div class="skill-card">
                 <h3>AI</h3>
-                <p>Proficient in machine learning concepts and implementing AI solutions.</p>
+                <p>Ability to provide Proficient in machine learning concepts and implementing AI solutions.</p>
             </div>
             <div class="skill-card">
                 <h3>Virtual Assistant</h3>
-                <p>Manage tasks, schedules, and support clients in a remote setting.</p>
+                <p>Ability to Manage tasks, schedules, and support clients in a remote setting.</p>
             </div>
             <div class="skill-card">
                 <h3>Remote Setting</h3>
                 <p>Highly adaptable and productive in distributed team environments.</p>
             </div>
             <div class="skill-card">
-                <h3>Front-End Development</h3>
+                <h3>Front-End Developmen</h3>
                 <p>Create user-friendly interfaces with HTML, CSS, and JavaScript.</p>
             </div>
             <div class="skill-card">
@@ -84,52 +73,53 @@
         </div>
     </section>
 
-   
-    <section id="projects" class="projects">
+    <section class="projects" id="projects">
         <h2>Projects</h2>
-        <div class="project-list"></div>
-    </section>
-
-    
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-wrapper">
-          
-            <div class="contact-left">
-                <div class="contact-icons">
-                    <div class="icon-item">
-                        <a href="mailto:samuelkwizera10@gmail.com">
-                            <img src="mail (1).png" alt="Email Icon" class="contact-icon" />
-                            <span>Email / samuelkwizera10@gmail.com</span>
-                        </a>
-                    </div>
-                    <div class="icon-item">
-                        <a href="https://www.linkedin.com/in/Sam-kwizera" target="_blank">
-                            <img src="linkedin-.png" alt="LinkedIn Icon" class="contact-icon" />
-                            <span>LinkedIn / Sam-kwizera</span>
-                        </a>
-                    </div>
-                    <div class="icon-item">
-                        <a href="https://github.com/Samkwizera" target="_blank">
-                            <img src="github.png" alt="GitHub Icon" class="contact-icon" />
-                            <span>GitHub / Samkwizera</span>
-                        </a>
-                    </div>
-                </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="chrome-capture-2025-0-24.png" alt="Project 1">
+                <h3>Velozy (SaaS Company)</h3>
+                <p>Website created for a SaaS company offering advanced solutions.</p>
             </div>
-            
-            <div class="contact-right">
-                <img src="logo.png" alt="SK Logo" class="contact-logo" />
+            <div class="project-card">
+                <img src="safespacerwanda logo.jpg" alt="Project 2">
+                <h3>SafeSpaceRwanda</h3>
+                <p>Collaborated with a co-founder to develop a mental health support page.</p>
+            </div>
+            <div class="project-card">
+                <img src="mauriza.jpg" alt="Project 3">
+                <h3>Maurizia Family Business</h3>
+                <p>Developed a page for a family business to showcase services and products.</p>
             </div>
         </div>
     </section>
 
+    <section class="get-in-touch" id="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="mail (1).png" alt="Email" class="contact-logo">
+                    <a href="samuelkwizera10@gmail.com">samuelkwizera10@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <img src="linkedin-.png" alt="LinkedIn" class="contact-logo">
+                    <a href="https://www.linkedin.com/in/samuel-kwizera-00a97a322/">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <img src="github.png" alt="GitHub" class="contact-logo">
+                    <a href="https://github.com/Samkwizera">GitHub</a>
+                </div>
+            </div>
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Samuel Kwizera |
-            <a href="https://github.com/Samkwizera" target="_blank">
-                GitHub: Samkwizera
-            </a>
-        </p>
+        <p>© 2025 Samuel Kwizera Ihimbazwe. All rights reserved.</p>
     </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
